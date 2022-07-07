@@ -1,4 +1,3 @@
-import { string } from "joi";
 import fighterRepository from "../repositories/fighterRepository.js";
 import HttpError from "./errors.js";
 import GitHubApi from "./gitHubApi.js";

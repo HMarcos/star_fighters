@@ -48,12 +48,20 @@ function selectFighterByUsername(fighter: string) {
     return db.query(query, values);
 }
 
+function selectRanking() {
+    const query = `SELECT username, wins, losses, draws FROM fighters
+    ORDER BY wins DESC, draws DESC;`;
+
+    return db.query(query);
+}
+
 const fighterRepository = {
     insertNewFighter,
     incrementUserWins,
     incrementUserLosses,
     incrementUserDraws,
-    selectFighterByUsername
+    selectFighterByUsername,
+    selectRanking
 }
 
 export default fighterRepository;
