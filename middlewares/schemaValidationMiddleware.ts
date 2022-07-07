@@ -4,7 +4,6 @@ import HttpError from "./../utils/errors.js";
 
 function valiteSchema(schema: Schema) {
     return (req: Request, res: Response, next: NextFunction) => {
-        console.log('executando...');
         const battle = req.body;
         const schemaValidation = schema.validate(battle, { abortEarly: false });
         if (schemaValidation.error) {
