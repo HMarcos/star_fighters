@@ -4,11 +4,12 @@ const api = axios.create({
     baseURL: "https://api.github.com"
 });
 
-function getUserRepositoriesInfo(user: string) {
-    return api.get(`/users/${user}/repos`);
+function getUserRepositoriesInfo(username: string) {
+    return api.get(`/users/${username}/repos`);
 }
 
 const GitHubApi = {
     getUserRepositoriesInfo
 }
+
 export default GitHubApi;
