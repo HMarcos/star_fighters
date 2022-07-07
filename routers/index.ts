@@ -5,4 +5,4 @@ const router = Router();
 
 router.use(battleRouter);
 
-export default Router;
+export default router;
